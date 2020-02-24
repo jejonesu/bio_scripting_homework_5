@@ -18,14 +18,14 @@ echo Multiplication of a and b are $mul
 div=$(echo "scale=3; ($a / $b)" | bc)
 echo division of a and b are $div
 
-mod=$(echo "scale=6; ($a % $b)" | bc)
+mod=$(echo "scale=8; ($a % $b)" | bc)
 echo Modulus of a and b are $mod
 
-((++a))
-echo Increment operator when applied on "a" results into a = $a
+inc=$(echo "scale=3; ($a + 1)" | bc -l)
+echo Increment operator when applied on "a" results into a = $inc
 
-((--b))
-echo Decrement operator when applied on "b" results into b = $b
+dec=$(echo "scale=3; ($b - 1)" | bc -l)
+echo Decrement operator when applied on "b" results into b = $dec
 
 ((--c))
 echo What was the default value \ of c if its value is now $c\?
