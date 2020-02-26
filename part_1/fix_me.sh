@@ -5,6 +5,8 @@ echo 'Enter first number a: '
 read a
 echo 'Enter second number b: '
 read b
+echo 'Enter third number c: '
+read c
 
 add=$(echo "scale=3; ($a + $b)" | bc)
 echo Addition of a and b are $add
@@ -27,5 +29,5 @@ echo Increment operator when applied on "a" results into a = $inc
 dec=$(echo "scale=3; ($b - 1)" | bc -l)
 echo Decrement operator when applied on "b" results into b = $dec
 
-((--c))
-echo What was the default value \ of c if its value is now $c\?
+ci=$(echo "scale=3; ($c - 1)" | bc -l)
+echo What was the default value \ of c if its value is now $ci '= c - 1'\? "$c"
